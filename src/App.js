@@ -1,17 +1,26 @@
 import React from 'react';
-// import Main from './Components/Main'
-import Routes from './Routes'
-import Nav from './Components/Nav'
+import store from './Redux/store'
+import { Provider } from 'react-redux'
+import CakeContainer from './Components/CakeContainer'
+import HooksCakeContainer from './Components/HooksCakeContainer'
+import IceCreamContainer from './Components/IceCreamContainer'
+import NewCake from './Components/NewCake'
+import ItemContainer from './Components/ItemContainer'
+import UserContainer from './Components/UserContainer'
 
 const App = () => {
   return (
-    <div>
-      <Nav />
-      {/* <Main>
-        <Routes />
-      </Main> */}
-      <Routes />
-    </div>
+    <Provider store={store} >
+      <div>
+        {/* <ItemContainer cake />
+        <ItemContainer  />
+        <CakeContainer/>
+        <HooksCakeContainer/>
+        <IceCreamContainer/>
+        <NewCake/> */}
+        <UserContainer/>
+      </div>
+    </Provider>
   );
 };
 
